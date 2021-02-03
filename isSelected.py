@@ -1,0 +1,16 @@
+from selenium import webdriver
+import time
+driver=webdriver.Chrome(executable_path="C:\Drivers\Chrome\chromedriver.exe")
+driver.get("http://demo.guru99.com/test/radio.html")
+status=driver.find_element_by_id("vfb-7-1").is_selected()
+print(status)
+driver.find_element_by_id("vfb-7-1").click()
+status=driver.find_element_by_id("vfb-7-1").is_selected()
+print(status)
+status=driver.find_element_by_id("vfb-6-0").is_selected()
+print(status)
+driver.find_element_by_id("vfb-6-0").click()
+status=driver.find_element_by_id("vfb-6-0").is_selected()
+print(status)
+driver.find_element_by_id("vfb-6-1").click()
+driver.close()
